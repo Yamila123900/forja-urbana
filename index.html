@@ -2,122 +2,185 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forja Urbana</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forja Urbana - Muebles en hierro y madera</title>
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      background: linear-gradient(180deg, #f7f7f7, #eaeaea);
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
       color: #333;
     }
+
     header {
-      background-color: #1f1f1f;
+      background-color: #1e1e1e;
       color: white;
-      padding: 40px 20px;
+      padding: 20px;
       text-align: center;
-      animation: fadeInDown 1.2s ease;
+      animation: fadeInDown 1s ease-out;
     }
-    h1 {
-      font-size: 3rem;
+
+    header h1 {
+      font-size: 2.5em;
       margin: 0;
-      font-weight: 700;
-      color: #ffcc00;
-      letter-spacing: 2px;
+      font-weight: bold;
+      color: #f9b233;
     }
-    .description {
-      padding: 30px 20px;
+
+    .intro {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
       text-align: center;
-      font-size: 1.2rem;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeInUp 1.5s ease;
+      animation: fadeIn 1.5s ease-in;
     }
+
+    .intro p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
       padding: 30px;
+      max-width: 1200px;
+      margin: auto;
     }
-    .gallery-item {
-      flex: 1 1 300px;
-      max-width: 300px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .gallery-item:hover {
-      transform: scale(1.04);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-    .gallery-item img {
+
+    .gallery img {
       width: 100%;
-      height: auto;
-      display: block;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    footer {
-      background-color: #1c1c1c;
-      color: #eee;
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
       text-align: center;
-      padding: 30px 15px;
-      font-size: 1rem;
-      animation: fadeInUp 2s ease;
+      padding: 40px 20px;
+      background-color: #fff;
     }
-    a {
-      color: #ffcc00;
+
+    .contact h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .social-buttons {
+      display: flex;
+      gap: 20px;
+      margin: 20px auto;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social-buttons a {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      background-color: #f4f4f4;
+      color: #000;
+      border-radius: 40px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .social-buttons a img {
+      margin-right: 10px;
+      height: 24px;
+      transition: transform 0.3s ease;
     }
+
+    .social-buttons a:hover {
+      background-color: #e0e0e0;
+      transform: translateY(-2px);
+    }
+
+    .social-buttons a:hover img {
+      transform: scale(1.2);
+    }
+
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
+      from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    footer {
+      background: #1e1e1e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>FORJA URBANA</h1>
-</header>
+  <header>
+    <h1>Forja Urbana</h1>
+  </header>
 
-<div class="description">
-  <p>Somos <strong>Forja Urbana</strong>, un taller artesanal dedicado a crear muebles modernos y resistentes en <strong>hierro y madera</strong>.</p>
-  <p>Fabricamos <strong>mesas, escritorios, percheros, patas, ménsulas, juegos de mesas ratonas</strong> y más, con diseño personalizado y a medida.</p>
-  <p>También realizamos <strong>rejas para ventanas, puertas y portones</strong>, incluyendo <strong>portones de hierro combinado con madera</strong> de estilo industrial o rústico.</p>
-</div>
+  <section class="intro">
+    <p>
+      Somos <strong>Forja Urbana</strong>, un taller ubicado en Aires Puros, Montevideo, dedicado a la fabricación de muebles y piezas en hierro y madera.
+      Diseñamos a medida escritorios, mesas ratonas, patas, ménsulas, percheros, juegos de comedor y más.
+      <br><br>
+      Además, realizamos <strong>rejas para ventanas, puertas y portones</strong> en hierro, así como <strong>portones combinados con madera</strong>.
+      Cada proyecto es único y personalizado.
+    </p>
+  </section>
 
-<div class="gallery">
-  <!-- FOTOS NUEVAS -->
-  <div class="gallery-item"><img src="https://i.imgur.com/10GDEXO.jpeg" alt="1" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/xDorf8n.jpeg" alt="2" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/XMk0TIW.jpeg" alt="3" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/topwSQt.jpeg" alt="4" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/CmRIqoL.jpeg" alt="5" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/Nk6ErXt.jpeg" alt="6" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/l6WDPXs.jpeg" alt="7" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/luLBorK.jpeg" alt="8" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/oLwDlLa.jpeg" alt="9" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/sFXa495.jpeg" alt="10" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/z7TIBht.jpeg" alt="11" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/weB3kn6.jpeg" alt="12" /></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/rFQr2ds.jpeg" alt="13" /></div>
-</div>
+  <section class="gallery">
+    <!-- Galería de imágenes (sin las dos eliminadas) -->
+    <img src="https://i.imgur.com/XMk0TIW.jpeg" alt="Mueble">
+    <img src="https://i.imgur.com/topwSQt.jpeg" alt="Mesa">
+    <img src="https://i.imgur.com/CmRIqoL.jpeg" alt="Escritorio">
+    <img src="https://i.imgur.com/xcpOo6Q.jpeg" alt="Silla">
+    <img src="https://i.imgur.com/Nk6ErXt.jpeg" alt="Perchero">
+    <img src="https://i.imgur.com/l6WDPXs.jpeg" alt="Rinconera">
+    <img src="https://i.imgur.com/luLBorK.jpeg" alt="Banco">
+    <img src="https://i.imgur.com/oLwDlLa.jpeg" alt="Juego de comedor">
+    <img src="https://i.imgur.com/rr4WwCK.jpeg" alt="Detalle madera">
+    <img src="https://i.imgur.com/sFXa495.jpeg" alt="Silla hierro">
+    <img src="https://i.imgur.com/8ipboLv.jpeg" alt="Mesa moderna">
+    <img src="https://i.imgur.com/FrbjKoW.jpeg" alt="Portón combinado">
+    <img src="https://i.imgur.com/z7TIBht.jpeg" alt="Rejas hierro">
+    <img src="https://i.imgur.com/weB3kn6.jpeg" alt="Portón madera hierro">
+    <img src="https://i.imgur.com/rFQr2ds.jpeg" alt="Puerta reja">
+  </section>
 
-<footer>
-  <p>📍 Gregorio Sanabria 3953 esquina Santa Ana, Aires Puros - Montevideo</p>
-  <p>📞 WhatsApp: <a href="https://wa.me/59894815535" target="_blank">094 815 535</a> / <a href="https://wa.me/59896733585" target="_blank">096 733 585</a></p>
-  <p>🔗 <a href="https://www.facebook.com/profile.php?id=61578338049559" target="_blank">Ver más trabajos en nuestro Facebook</a></p>
-</footer>
+  <section class="contact">
+    <h2>Contacto</h2>
+    <p>📍 Gregorio Sanabria 3953, esquina Santa Ana - Aires Puros, Montevideo</p>
+    <p>📞 WhatsApp: 094 815 535 / 096 733 585</p>
+
+    <div class="social-buttons">
+      <a href="https://wa.me/59894815535" class="btn-whatsapp" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+        Escribinos por WhatsApp
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61578338049559" class="btn-facebook" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">
+        Ver más trabajos en Facebook
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Forja Urbana - Todos los derechos reservados
+  </footer>
 
 </body>
 </html>
