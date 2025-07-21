@@ -1,140 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forja Urbana</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-    body {
-      background-color: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #1e1e1e, #3d3d3d);
-      color: #fff;
-      padding: 3rem 1rem;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    nav {
-      background-color: #111;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 1rem;
-    }
-    nav a {
-      color: #00ff88;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    .section {
-      padding: 3rem 1rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #222;
-      border-left: 6px solid #00ff88;
-      padding-left: 1rem;
-    }
-    .slider {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .slides {
-      display: flex;
-      width: 1600%;
-      animation: slide 40s infinite ease-in-out;
-    }
-    .slides img {
-      height: 300px;
-      width: 6.25%;
-      object-fit: cover;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      10% { transform: translateX(0); }
-      20% { transform: translateX(-6.25%); }
-      30% { transform: translateX(-6.25%); }
-      40% { transform: translateX(-12.5%); }
-      50% { transform: translateX(-12.5%); }
-      60% { transform: translateX(-18.75%); }
-      70% { transform: translateX(-18.75%); }
-      80% { transform: translateX(-25.0%); }
-      90% { transform: translateX(-25.0%); }
-      100% { transform: translateX(0); }
-    }
-    footer {
-      background-color: #111;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Forja Urbana</h1>
-    <p>Muebles modernos en hierro y madera - Aires Puros, Montevideo</p>
-  </header>
-
-  <nav>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="galeria" class="section">
-    <h2>Galería</h2>
-    <div class="slider">
-      <div class="slides">
-        <img src="https://i.imgur.com/10GDEXO.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/xDorf8n.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/JvRmu1o.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/1eMQpSx.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/XMk0TIW.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/topwSQt.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/CmRIqoL.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/xcpOo6Q.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/Nk6ErXt.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/l6WDPXs.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/luLBorK.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/oLwDlLa.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/rr4WwCK.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/sFXa495.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/8ipboLv.jpeg" alt="Forja Urbana"><img src="https://i.imgur.com/FrbjKoW.jpeg" alt="Forja Urbana">
-      </div>
-    </div>
-  </section>
-
-  <section id="contacto" class="section">
-    <h2>Contacto</h2>
-    <p>¿Querés un diseño a medida o tenés una consulta?</p>
-    <p>Escribinos por WhatsApp:</p>
-    <p>
-      <a href="https://wa.me/59894815535" target="_blank">094 815 535</a> | 
-      <a href="https://wa.me/59896733585" target="_blank">096 733 585</a>
-    </p>
-    <p>¡También podés seguirnos en redes sociales para ver más creaciones!</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Forja Urbana - Muebles con alma de hierro y diseño</p>
-  </footer>
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Forja Urbana
+  </title>
+ </head>
+ <body>
+  <div class="gallery">
+   <div class="gallery-item">
+    <img src="https://i.imgur.com/10GDEXO.jpeg"/>
+   </div>
+   <div class="gallery-item">
+    <img src="https://i.imgur.com/xcpOo6Q.jpeg"/>
+   </div>
+   <div class="gallery-item">
+    <img src="https://i.imgur.com/z7TIBht.jpeg"/>
+   </div>
+   <div class="gallery-item">
+    <img src="https://i.imgur.com/weB3kn6.jpeg"/>
+   </div>
+   <div class="gallery-item">
+    <img src="https://i.imgur.com/rFQr2ds.jpeg"/>
+   </div>
+  </div>
+  <div class="description">
+   <p>
+    Fabricamos muebles de hierro y madera. Hacemos trabajos a medida y personalizados.
+   </p>
+   <p>
+    Además, realizamos trabajos en hierro para rejas de ventanas, puertas y portones. También creamos portones combinando hierro y madera, con diseño moderno y resistente.
+   </p>
+  </div>
+ </body>
 </html>
 
